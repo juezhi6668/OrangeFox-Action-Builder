@@ -20,7 +20,7 @@ on:
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
         required: true
-        default: 'https://github.com/Nanhumly-Staging/twrp_device_xiaomi_chiron'
+        default: 'https://github.com/Nanhumly-Staging/twrp_device_xiaomi_sagit'
       DEVICE_TREE_BRANCH:
         description: 'OrangeFox Device Tree Branch'
         required: true
@@ -28,7 +28,7 @@ on:
       DEVICE_PATH:
         description: 'Specify your Device Path'
         required: true
-        default: 'device/xiaomi/chiron'
+        default: 'device/xiaomi/sagit'
       DEVICE_NAME:
         description: 'Specify your Device Codename'
         required: true
@@ -45,7 +45,7 @@ on:
 
 jobs:
   build:
-    name: Build OFR by ${{ github.actor }}
+    name: Build OFR by ${{ juezhi6668 }}
     runs-on: ubuntu-22.04
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -75,8 +75,8 @@ jobs:
       run: |
         mkdir -p ${GITHUB_WORKSPACE}/OrangeFox
         cd ${GITHUB_WORKSPACE}/OrangeFox
-        git config --global user.name "${{ github.actor }}"
-        git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+        git config --global user.name "${{ juezhi6668 }}"
+        git config --global user.email "${{ github.actor_id }}+${{ juezhi6668 }}@users.noreply.github.com"
         git clone https://gitlab.com/OrangeFox/sync.git -b master
         cd sync
         ./orangefox_sync.sh --branch ${{ inputs.MANIFEST_BRANCH }} --path ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ inputs.MANIFEST_BRANCH }}
