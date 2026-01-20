@@ -20,7 +20,7 @@ on:
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
         required: true
-        default: 'https://github.com/Nanhumly-Staging/twrp_device_xiaomi_chiron'
+        default: 'https://github.com/juezhi6668/twrp_device_xiaomi_chiron'
       DEVICE_TREE_BRANCH:
         description: 'OrangeFox Device Tree Branch'
         required: true
